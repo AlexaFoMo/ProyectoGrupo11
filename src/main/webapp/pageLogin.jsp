@@ -1,3 +1,5 @@
+<%-- <%@page import="controlador.ConexionBD"%> --%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -34,15 +36,15 @@
 			<span>Joyeria Isis</span>
 		</div>
 
-		<img class="mainContenedor__logoMarca" src="css/img/logo__.jpg" alt="icon" />
+		<img class="mainContenedor__logoMarca" src="css/img/logo__.jpg"
+			alt="icon" />
 
 		<!-- Formulario contenedor de los "botones" -->
-		<form class="mainContenedor____formularioLogin" method="get"
-			action="./tiendaServlet">
-			<!-- Los 3 "botones" del login, 2 de escribir y 1 botÃ³n de Login -->
+		<form class="mainContenedor____formularioLogin" method="post" action="servletPageLogin">
+		
+			<!-- Los 3 "botones" del login, 2 de escribir y 1 botón de Login -->
 			<input id="usuario" type="text" name="usuario" placeholder="Usuario" />
-			<input id="contrasena" type="password" name="contrasena"
-				placeholder="Contrasena" />
+			<input id="contrasena" type="password" name="contrasena" placeholder="Contrasena" />
 
 			<button id="login" type="submit" name="Aceptar">Login</button>
 		</form>
@@ -52,7 +54,7 @@
 
 	<!-- Pie de page -->
 	<footer>
-		<p>* 2021 * Tienda Isis * All Right Reserved</p>
+		<p>* 2021 * Joyeria Isis * All Right Reserved</p>
 
 		<div class="footer__redesSociales">
 			<a href="salidas.html"><i class="fab fa-facebook-f"></i></a> <a
@@ -62,6 +64,11 @@
 				href="salidas.html"><i class="fab fa-youtube"></i></a>
 		</div>
 	</footer>
+	<!-- Conexion a base de datos -->
+	<%-- <%
+	ConexionBD co = new ConexionBD();
+	co.conexionDataBase();
+	%> --%>
 
 	<!-- Cierre page Login -->
 </body>
